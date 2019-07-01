@@ -31,10 +31,10 @@ public class DBOpertion
             public void run()
             {
                     Log.w("DBOperation", "in thread");
-                    String connectionUrl = "jdbc:jtds:sqlserver://boschsql.database.windows.net:1433/boschdb;"
-                                            + "database=boschdb;"
-                                            + "user=bosch;"
-                                            + "password=Asd12345****;"
+                    String connectionUrl = "jdbc:jtds:sqlserver://<dbname>.database.windows.net:1433/boschdb;"
+                                            + "database=<dbname>;"
+                                            + "user=<dbuser>;"
+                                            + "password=<dbpassword>;"
                                             + "encrypt=false;"
                                             + "trustServerCertificate=false;"
                                             + "hostNameInCertificate=*.database.windows.net;"
@@ -77,14 +77,14 @@ public class DBOpertion
             public void run()
             {
                 Log.w("DBOperation", "in thread");
-                String connectionUrl = "jdbc:jtds:sqlserver://boschsql.database.windows.net:1433/boschdb;"
-                        + "database=boschdb;"
-                        + "user=bosch;"
-                        + "password=Asd12345****;"
-                        + "encrypt=false;"
-                        + "trustServerCertificate=false;"
-                        + "hostNameInCertificate=*.database.windows.net;"
-                        + "loginTimeout=30;";
+                    String connectionUrl = "jdbc:jtds:sqlserver://<dbname>.database.windows.net:1433/boschdb;"
+                                            + "database=<dbname>;"
+                                            + "user=<dbuser>;"
+                                            + "password=<dbpassword>;"
+                                            + "encrypt=false;"
+                                            + "trustServerCertificate=false;"
+                                            + "hostNameInCertificate=*.database.windows.net;"
+                                            + "loginTimeout=30;";
                 String fetchsql = "select userid from OBDuser;";
                 ResultSet resultSet = null;
                 try (Connection connection = DriverManager.getConnection(connectionUrl))
